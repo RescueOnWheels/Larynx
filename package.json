@@ -1,0 +1,19 @@
+{
+  "name": "larynx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RescueOnWheels/Larynx.git"
+  },
+  "author": "RescueOnWheels",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/RescueOnWheels/Larynx/issues"
+  },
+  "homepage": "https://github.com/RescueOnWheels/Larynx#readme"
+}
