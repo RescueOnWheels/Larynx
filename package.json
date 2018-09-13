@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/RescueOnWheels/Larynx/issues"
   },
-  "homepage": "https://github.com/RescueOnWheels/Larynx#readme"
+  "homepage": "https://github.com/RescueOnWheels/Larynx#readme",
+  "dependencies": {
+    "socket.io-client": "^2.1.1"
+  }
 }
