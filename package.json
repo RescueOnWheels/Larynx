@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/RescueOnWheels/Larynx#readme",
   "dependencies": {
+    "ip": "^1.1.5",
+    "lcdi2c": "^1.0.6",
     "socket.io-client": "^2.1.1"
   }
 }

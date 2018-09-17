@@ -1,3 +1,13 @@
+//Very ugly I know very WIP
+const ip = require('ip');
+const LCD = require('lcdi2c');
+
+const lcd = new LCD(1, 0x27, 16, 2);
+const ip_addr = ip.address();
+
+lcd.clear();
+lcd.print(ip_addr);
+
 const EventEmitter = require('events').EventEmitter;
 const io = require('socket.io-client');
 
