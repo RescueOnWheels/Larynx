@@ -10,7 +10,7 @@ class Larynx extends EventEmitter {
         this.socket = io.connect('http://127.0.0.1:3000');
 
         this.socket.on('connect', () => {
-            console.log("Connected");
+            console.log("It's alive!");
         });
 
         this.socket.on('disconnect', () => {
