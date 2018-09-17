@@ -15,6 +15,7 @@ class Larynx extends EventEmitter {
 
         this.socket.on('disconnect', () => {
             console.log("Disconnected");
+            this.emit('disconnect');
         });
 
         this.socket.on('move', (data) => {
