@@ -46,7 +46,6 @@ describe('generateToken', () => {
       });
     });
 
-
     it('should return a token with a length of 4, if there is no input for \'n\'', () => {
       // Act
       token = generateToken();
@@ -54,7 +53,6 @@ describe('generateToken', () => {
       // Assert
       token.should.have.lengthOf(4);
     });
-
 
     it('should return a token with a length of 1024, if \'n\' equals 1024', () => {
       // Act
