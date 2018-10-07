@@ -4,5 +4,8 @@
   ],
   "ignoreDeps": [
     "debug",
-  ]
+  ],
+  "labels": [
+    "Type: Maintenance",
+  ],
 }
