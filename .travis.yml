@@ -4,6 +4,9 @@ language:
 node_js:
   - 'lts/*'
 
+env:
+  - NODE_ENV=CI
+
 cache:
   directories:
     - node_modules
@@ -15,4 +18,4 @@ script:
   - npm test
 
 after_script:
-  - npm run coveralls
+  - npm run coverage
