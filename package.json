@@ -9,9 +9,10 @@
   },
   "scripts": {
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "dev": "cross-env NODE_ENV=development DEBUG=\"RRS:*\" node ./index.js",
+    "dev": "cross-env NODE_ENV=development DEBUG=RRS:* node ./index.js",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
+    "prod": "cross-env DEBUG=RRS:* node ./index.js",
     "test": "nyc --reporter=html --reporter=text mocha --exit"
   },
   "repository": {
