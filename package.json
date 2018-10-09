@@ -3,16 +3,34 @@
   "version": "1.0.0",
   "description": "The onboard communication system of the Rover.",
   "main": "index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "test"
+  "dependencies": {
+    "debug": "3.1.0",
+    "if-env": "1.0.4",
+    "ip": "1.1.5",
+    "socket.io": "2.1.1",
+    "socketio-wildcard": "2.0.0"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "coveralls": "3.0.2",
+    "cross-env": "5.2.0",
+    "eslint": "5.6.1",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "mocha": "5.2.0",
+    "nyc": "13.0.1"
+  },
+  "optionalDependencies": {
+    "lcdi2c": "1.0.6"
   },
   "scripts": {
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "dev": "cross-env NODE_ENV=development DEBUG=\"RRS:*\" node ./index.js",
-    "lint": "eslint .",
-    "lint-fix": "eslint . --fix",
-    "test": "nyc --reporter=html --reporter=text mocha --exit"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "if-env NODE_ENV=CI && npm run lint:ci || npm run lint:fix",
+    "lint:ci": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "if-env NODE_ENV=CI && npm run test:ci || npm run test:debug",
+    "test:ci": "nyc mocha",
+    "test:debug": "cross-env DEBUG=RRS:* npm run test:ci"
   },
   "repository": {
     "type": "git",
@@ -24,20 +42,8 @@
     "url": "https://github.com/RescueOnWheels/Larynx/issues"
   },
   "homepage": "https://github.com/RescueOnWheels/Larynx#readme",
-  "dependencies": {
-    "debug": "3.1.0",
-    "ip": "1.1.5",
-    "lcdi2c": "1.0.6",
-    "socket.io": "2.1.1"
-  },
-  "devDependencies": {
-    "chai": "4.2.0",
-    "coveralls": "3.0.2",
-    "cross-env": "5.2.0",
-    "eslint": "5.6.1",
-    "eslint-config-airbnb-base": "13.1.0",
-    "eslint-plugin-import": "2.14.0",
-    "mocha": "5.2.0",
-    "nyc": "13.0.1"
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   }
 }
