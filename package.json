@@ -25,12 +25,13 @@
   },
   "scripts": {
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "lint": "if-env NODE_ENV=CI && npm run lint:ci || npm run lint:fix",
-    "lint:ci": "eslint .",
+    "lint": "if-env NODE_ENV=CI && npm run lint: || npm run lint:fix",
+    "lint:": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "if-env NODE_ENV=CI && npm run test:ci || npm run test:debug",
-    "test:ci": "nyc mocha",
-    "test:debug": "cross-env DEBUG=RRS:* npm run test:ci"
+    "test": "if-env NODE_ENV=CI && npm run test: || if-env npm_config_dev=true && npm run test:dev || if-env npm_config_debug=true && npm run test:debug || npm run test:",
+    "test:": "nyc mocha",
+    "test:debug": "cross-env DEBUG=RRS:* npm run test:",
+    "test:dev": "if-env npm_config_debug=true && cross-env NODE_ENV=development npm run test:debug || cross-env NODE_ENV=development npm run test:"    
   },
   "repository": {
     "type": "git",
