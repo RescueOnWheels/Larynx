@@ -10,6 +10,11 @@ The onboard communication system of the [Rover](https://github.com/RescueOnWheel
 $ npm run lint
 ```
 
+### Start
+```powershell
+$ npm start [--dev] [--debug]
+```
+
 ### Test
 ```powershell
 $ npm test [--dev] [--debug]
