@@ -1,12 +1,8 @@
-/**
- * BDD / TDD assertion library.
- */
+/* Packages */
 const chai = require('chai');
 
-/**
- * Function to test.
- */
-const generateToken = require('./../lib/helpers/generateToken');
+/* Test target */
+const generateToken = require('./../../../lib/helpers/generateToken');
 
 chai.should();
 
