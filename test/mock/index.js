@@ -1,5 +1,5 @@
 /* Helpers */
-const generateToken = require('./helpers/generateToken');
+const generateToken = require('./helpers/generateToken.test');
 
 describe('Mock', () => {
   describe('helpers', () => {
