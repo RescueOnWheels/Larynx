@@ -2,13 +2,17 @@
 const chai = require('chai');
 
 /* Test target */
-const generateToken = require('./../../../lib/helpers/generateToken');
+const generateToken = require('../../../lib/helpers/generateToken');
 
 chai.should();
 
 describe('generateToken', () => {
   // Arrange
   let token;
+
+  beforeEach(() => {
+    process.env.NODE_ENV = undefined;
+  });
 
   describe('Input', () => {
     it('should return an error when \'n\' is not a number', () => {
@@ -56,6 +60,28 @@ describe('generateToken', () => {
 
       // Assert
       token.should.have.lengthOf(1024);
+    });
+
+    it('should return \'ABBA\' if ENV is development', () => {
+      // Arrange
+      process.env.NODE_ENV = 'development';
+
+      // Act
+      token = generateToken();
+
+      // Assert
+      token.should.equal('ABBA');
+    });
+
+    it('should return \'ABBA\' if ENV is debug', () => {
+      // Arrange
+      process.env.NODE_ENV = 'debug';
+
+      // Act
+      token = generateToken();
+
+      // Assert
+      token.should.equal('ABBA');
     });
   });
 });
