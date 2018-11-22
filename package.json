@@ -4,7 +4,6 @@
   "description": "The onboard communication system of the Rover.",
   "main": "index.js",
   "dependencies": {
-    "debug": "3.1.0",
     "if-env": "1.0.4",
     "ip": "1.1.5",
     "is-online": "7.0.0",

@@ -1,0 +1,4 @@
+[submodule "lib/Auxilio"]
+	path = lib/Auxilio
+	url = https://github.com/RescueOnWheels/Auxilio
+	ignore = dirty
