@@ -1,12 +1,12 @@
 /* Helpers */
-const generateToken = require('./helpers/generateToken.test');
+const screen = require('./helpers/screen.test');
 
 /* Lib */
 const Auxilio = require('./../../lib/Auxilio/test');
 
 describe('Mock', () => {
   describe('helpers', () => {
-    describe('generateToken', generateToken);
+    describe('screen', screen);
   });
 
   describe('lib', () => {
