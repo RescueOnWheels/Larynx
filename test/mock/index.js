@@ -1,3 +1,5 @@
+const larynx = require('./larynx.test');
+
 /* Helpers */
 const screen = require('./helpers/screen.test');
 
@@ -5,6 +7,8 @@ const screen = require('./helpers/screen.test');
 const Auxilio = require('./../../lib/Auxilio/test');
 
 describe('Mock', () => {
+  describe('larynx', larynx);
+
   describe('helpers', () => {
     describe('screen', screen);
   });
