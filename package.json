@@ -34,7 +34,7 @@
     "start:debug": "cross-env DEBUG=RRS:* npm run start:",
     "start:dev": "if-env npm_config_debug=true && cross-env NODE_ENV=development npm run start:debug || cross-env NODE_ENV=development npm run start:",
     "test": "if-env NODE_ENV=CI && npm run test: || if-env npm_config_dev=true && npm run test:dev || if-env npm_config_debug=true && npm run test:debug || npm run test:",
-    "test:": "nyc mocha --timeout 5000 --exit",
+    "test:": "nyc mocha --exit",
     "test:debug": "cross-env DEBUG=RRS:* npm run test:",
     "test:dev": "if-env npm_config_debug=true && cross-env NODE_ENV=development npm run test:debug || cross-env NODE_ENV=development npm run test:",
     "update": "git submodule update -f & git submodule foreach git pull origin master"
